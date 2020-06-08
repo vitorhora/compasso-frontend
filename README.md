@@ -1,11 +1,23 @@
 # compasso-frontend
-Implementação de Front utilizando VueJs, Java e Material Design.
+Implementação estudo de caso, utilizando VueJs, Java e Material Design, consumindo APIs do GitHub
 
-![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/Arquitetura_Front.png)
+## Aplicação
 
-# front-github
-Projeto representando o Front, utilizando (conforme solicitado) VueJs/Material e Java.
+```
+Apresentação da aplicação.
+```
+![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/aplicacao.png)
 
+
+
+## Arquitetura
+```
+Visão de arquitetura.
+```
+![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/arquitetura_back.png)
+
+
+# Caso de uso
 
 ```
 Dado um determinado usuário, deverá ser possível navegar diretamente até a página de detalhe do usuário sem que seja necessário efetuar uma nova busca. Ex: http://localhost:3000/USER_GITHUB
@@ -16,12 +28,13 @@ Gostariamos de ao clicar no botão de starred, listar os repositorios mais visit
 
 ```
 
-## Project setup
+## Setup do projeto
 ```
+Dentro do diretório raiz do projeto "front-github".
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilar e atualizar para desenvolvimento
 ```
 npm run serve
 ```

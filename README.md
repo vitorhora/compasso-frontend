@@ -28,7 +28,7 @@ Gostariamos de ao clicar no botão de starred, listar os repositorios mais visit
 
 ```
 
-## Setup do projeto
+### Setup do projeto
 ```
 Dentro do diretório raiz do projeto "front-github".
 npm install

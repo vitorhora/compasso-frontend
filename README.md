@@ -1,5 +1,7 @@
 # compasso-frontend
-Implementação de Front utilizando VueJs e Material Design
+Implementação de Front utilizando VueJs, Java e Material Design.
+
+![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/Arquitetura_Front.png)
 
 # front-github
 Projeto representando o Front, utilizando (conforme solicitado) VueJs/Material e Java.

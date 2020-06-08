@@ -80,11 +80,21 @@ export default {
   },
 
   mounted(){    
+    console.log(location.pathname);   
+    this.usuario = location.pathname.replace('/','');
+    if (this.usuario){
+      this.listarRepositorios();
+    }
   },
 
   methods:{
     
-    listarRepositorios(){   
+    listarRepositorios(){  
+      if (!this.usuario || !this.usuario.trim()) {
+         alert('Informar dado da pesquisa'); 
+         return; 
+      };
+
       Repositorio.listarRepositorios(this.usuario).then(resposta => {
         this.repositorios = resposta.data
       }).catch(e => {
@@ -93,6 +103,11 @@ export default {
     },
 
     listarFavoritos(){
+      if (!this.usuario || !this.usuario.trim()) {
+         alert('Informar dado da pesquisa'); 
+         return; 
+      };
+      
       Repositorio.listarFavoritos(this.usuario).then(resposta => {
         this.repositorios = resposta.data
       }).catch(e => {

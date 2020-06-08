@@ -28,12 +28,12 @@ Gostariamos de ao clicar no botão de starred, listar os repositorios mais visit
 
 ```
 
-## Project setup
+## Setub do projeto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilar e atualizar para desenvolvimento
 ```
 npm run serve
 ```

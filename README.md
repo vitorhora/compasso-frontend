@@ -10,7 +10,7 @@ Apresentação da aplicação.
 
 
 
-## Visão de Arquitetura
+## Arquitetura
 ```
 Visão de arquitetura.
 ```

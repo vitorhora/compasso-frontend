@@ -1,5 +1,6 @@
 # compasso-frontend
-Implementação estudo de caso, utilizando VueJs, Java e Material Design, consumindo APIs do GitHub
+Implementação estudo de caso, utilizando VueJs, Java e Material Design, consumindo APIs do GitHub.
+Tomando como referência o “Time to Market” curto disponível para entrega, seguem os artefactos desenvolvidos.
 
 ## Aplicação
 

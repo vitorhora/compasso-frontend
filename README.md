@@ -14,7 +14,7 @@ Apresentação da aplicação.
 ```
 Visão de arquitetura.
 ```
-![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/desenho_arquitetura.png)
+![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/arquitetura_back.png)
 
 
 # Caso de uso

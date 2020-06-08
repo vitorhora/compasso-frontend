@@ -1,5 +1,5 @@
 # compasso-frontend
-Implementação de Front utilizando VueJs, Java e Material Design, consumindo APIs do GitHub
+Implementação estudo de caso, utilizando VueJs, Java e Material Design, consumindo APIs do GitHub
 
 ## Aplicação
 
@@ -30,6 +30,7 @@ Gostariamos de ao clicar no botão de starred, listar os repositorios mais visit
 
 ## Setup do projeto
 ```
+Dentro do diretório raiz do projeto "front-github".
 npm install
 ```
 

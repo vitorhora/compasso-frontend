@@ -35,7 +35,7 @@ Gostariamos de ao clicar no botão de starred, listar os repositorios mais visit
 ### Setup do projeto
 
 Pré-requisitos
-NodeJs instalado.
+NodeJS instalado.
 
 ```
 Dentro do diretório raiz do projeto "front-github".

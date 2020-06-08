@@ -3,12 +3,17 @@ Implementação de Front utilizando VueJs, Java e Material Design.
 
 ## Aplicação
 
+```
+Apresentação da aplicação.
+```
 ![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/aplicacao.png)
 
 
 
 ## Visão de Arquitetura
-
+```
+Visão de arquitetura.
+```
 ![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/desenho_arquitetura.png)
 
 

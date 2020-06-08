@@ -28,7 +28,7 @@ Gostariamos de ao clicar no botão de starred, listar os repositorios mais visit
 
 ```
 
-## Setub do projeto
+## Setup do projeto
 ```
 npm install
 ```

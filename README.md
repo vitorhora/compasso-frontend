@@ -27,7 +27,9 @@ Visão de arquitetura.
 Dado um determinado usuário, deverá ser possível navegar diretamente até a página de detalhe do usuário sem que seja necessário efetuar uma nova busca. Ex: http://localhost:3000/USER_GITHUB
 
 Gostariamos de pesquisar por usuário.
+
 Gostariamos de ao clicar no botão de repos, listar repositorios do usuario pesquisado.
+
 Gostariamos de ao clicar no botão de starred, listar os repositorios mais visitados por aquele usuario.
 
 

@@ -1,5 +1,5 @@
 # frontend-vue
-Estudo de caso utilizando VueJs, Java e Material Design, consumindo APIs do GitHub.
+Estudo de caso utilizando VueJs e Material Design, consumindo APIs do GitHub.
 
 Desafio: https://github.com/levisfront/api-github-interview
 

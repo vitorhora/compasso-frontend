@@ -47,6 +47,7 @@ npm install
 ```
 npm run serve
 ```
+A URL será informada quando o servidor terminar de iniciar.
 
 ### Back-end 
 

@@ -50,7 +50,7 @@ npm run serve
 
 ### Back-end 
 
-Endpoint user: https://api.github.com/users/USER_GITHUB
-Endpoint repos: https://api.github.com/users/USER_GITHUB/repos
-Endpoint starred: https://api.github.com/users/USER_GITHUB/starred{/owner}{/repo}
+* Endpoint user: https://api.github.com/users/USER_GITHUB
+* Endpoint repos: https://api.github.com/users/USER_GITHUB/repos
+* Endpoint starred: https://api.github.com/users/USER_GITHUB/starred{/owner}{/repo}
 

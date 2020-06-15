@@ -1,7 +1,7 @@
 # frontend-vue
 Estudo de caso utilizando VueJS e Material Design, consumindo APIs do GitHub.
 
-## REQUISITOS DA ENTREGA
+## Requisitos
 
 Aplicação utilizando a api do GITHUB https://developer.github.com/v3/ consumindo os seguintes endpoints:
 
@@ -23,7 +23,7 @@ Dado um determinado usuário, deverá ser possível navegar diretamente até a p
     Gostariamos de ao clicar no botão de repos, listar repositorios do usuario pesquisado.
     Gostariamos de ao clicar no botão de starred, listar os repositorios mais visitados por aquele usuario.
 
-## CENÁRIO
+## Cenário
 
 Na página do campo de busca, deverá ser possível inserir nomes de usuários do github, repositórios e os mais visitados pelos os usuários.
 

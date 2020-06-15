@@ -49,7 +49,7 @@ Pré-requisitos
 * NodeJS.
 
 
-Dentro do diretório raiz do projeto "front-github".
+No diretório raiz do projeto "front-github".
 ```
 npm install
 ```

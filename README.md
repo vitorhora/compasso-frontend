@@ -3,13 +3,13 @@ Estudo de caso utilizando VueJS e Material Design, consumindo APIs do GitHub.
 
 ## REQUISITOS DA ENTREGA
 
-Gostaríamos nos entregasse uma aplicação utilizando a api do GITHUB https://developer.github.com/v3/ consumindo os seguintes endpoints:
+Aplicação utilizando a api do GITHUB https://developer.github.com/v3/ consumindo os seguintes endpoints:
 
     Endpoint user: https://api.github.com/users/USER_GITHUB
     Endpoint repos: https://api.github.com/users/USER_GITHUB/repos
     Endpoint starred: https://api.github.com/users/USER_GITHUB/starred{/owner}{/repo}
 
-A aplicação deverá constituir três componentes principais:
+Componentes principais:
 
     O campo de busca.
     Visualização de resultados.
@@ -22,17 +22,6 @@ Dado um determinado usuário, deverá ser possível navegar diretamente até a p
     Gostariamos de pesquisar por usuario.
     Gostariamos de ao clicar no botão de repos, listar repositorios do usuario pesquisado.
     Gostariamos de ao clicar no botão de starred, listar os repositorios mais visitados por aquele usuario.
-
-Você poderá usar o framework css Bootstrap ou Materialize para construção dos componentes UI (Se preferir, os componentes poderão ser criados do zero, utilizando as boas práticas).
-
-Você poderá usar os frameworks js para desenvolvimento da sua aplicação ou utilizar o Vanilajs e jQuery.
-
-Você poderá utilizar Jasmine, Mocha ou RhinoUnit para testar os request feitos.
-STACK ESPERADA PARA O TESTE
-
-    HTML 5 (Desejavel o uso de SEO, Semãntica, Usabilidade).
-    JAVASCRIPT (Desejavel o uso de Vanilla, jQuery, Knockoutjs, Angular V2, Vuejs, Reactjs, Performance).
-    CSS 3 (Desejavel o uso de SASS, LESS, Stylus, Bootstrap, Materialize, Escalabilidade, Responsivo, BEM CSS).
 
 ## CENÁRIO
 

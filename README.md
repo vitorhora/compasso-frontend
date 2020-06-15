@@ -19,9 +19,9 @@ Ao clicar nos botões de repos e starred, deverá mostrar uma lista simples de c
 
 Dado um determinado usuário, deverá ser possível navegar diretamente até a página de detalhe do usuário sem que seja necessário efetuar uma nova busca. Ex: http://localhost:3000/USER_GITHUB
 
-    Gostariamos de pesquisar por usuario.
-    Gostariamos de ao clicar no botão de repos, listar repositorios do usuario pesquisado.
-    Gostariamos de ao clicar no botão de starred, listar os repositorios mais visitados por aquele usuario.
+    Pesquisar por usuario.
+    Clicar no botão de repos, listar repositorios do usuario pesquisado.
+    Clicar no botão de starred, listar os repositorios mais visitados por aquele usuario.
 
 ## Cenário
 

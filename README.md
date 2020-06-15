@@ -43,19 +43,6 @@ Visão de arquitetura.
 ![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/front-github/imagens/arquitetura_back.png)
 
 
-# Caso de uso
-
-
-Dado um determinado usuário, deverá ser possível navegar diretamente até a página de detalhe do usuário sem que seja necessário efetuar uma nova busca. Ex: http://localhost:3000/USER_GITHUB
-
-Gostariamos de pesquisar por usuário.
-
-Gostariamos de ao clicar no botão de repos, listar repositorios do usuario pesquisado.
-
-Gostariamos de ao clicar no botão de starred, listar os repositorios mais visitados por aquele usuario.
-
-
-
 ### Setup do projeto
 
 Pré-requisitos

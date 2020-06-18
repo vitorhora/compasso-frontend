@@ -14,6 +14,13 @@ export default {
  
   components: {   
     SButton   
-  }  
+  },
+
+  props: {
+    onClick: {
+      type: Function,
+      required: true
+    }
+  }
 }
 </script>

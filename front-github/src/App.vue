@@ -11,21 +11,27 @@
     <div class="container">
       
       <label>Usu&aacute;rio</label>
-      <input v-model="usuario" placeholder="Digite sua pesquisa">      
-      
+      <VInputText type="text" :value="usuario" placeholder="Digite sua pesquisa" @input="usuario = $event"/>
+     
       <td>                
-          <PButton @click="listarRepositorios" />
+          <PButton @click="listarRepositorios">
+            <slot>repos</slot>
+          </PButton>
       </td> 
 
       <td>         
-          <PButton @click="listarFavoritos" />
+          <PButton @click="listarFavoritos">
+            <slot>starred</slot>
+          </PButton>
       </td> 
 
-      <td>           
-          <SButton @click="limparResultado" />
-      </td>
-      
+      <td>          
+          <SButton @click="limparTela">
+            <slot>Limpar</slot>
+          </SButton>
 
+      </td>
+       
       <tr>        
         <td>
            <label>Id: </label>
@@ -81,6 +87,8 @@ import Repositorio from './services/repositorios'
 
 import PButton from './components/atoms/PButton'
 import SButton from './components/atoms/SButton'
+import VInput from './components/atoms/VInput'
+import VInputText from './components/atoms/VInputText'
 
 export default {
   name: 'app',
@@ -88,7 +96,9 @@ export default {
   components: {   
    
     PButton,
-    SButton
+    SButton,  
+    VInput,
+    VInputText
     
   },
 
@@ -115,7 +125,7 @@ export default {
 
   methods:{
 
-    limparResultado(){
+    limparTela(){
       this.usuario = '';
       this.informacao = '';
       this.repositorios = [];

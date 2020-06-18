@@ -13,25 +13,16 @@
       <label>Usu&aacute;rio</label>
       <input v-model="usuario" placeholder="Digite sua pesquisa">      
       
-      <td>
-
-          <button @click="listarRepositorios" class="waves-effect waves-light btn-small">Repos<i class="material-icons left">send</i></button>       
-
+      <td>                
+          <PButton @click="listarRepositorios" />
       </td> 
 
-      <td>
-          <button @click="listarFavoritos" class="waves-effect waves-light btn-small">Starred<i class="material-icons left">send</i></button>
-
+      <td>         
+          <PButton @click="listarFavoritos" />
       </td> 
 
-      <td>
-
-        <form @submit.prevent="limparResultado">       
-
-          <botao-limpar>Limpar</botao-limpar>
-
-        </form>
-
+      <td>           
+          <SButton @click="limparResultado" />
       </td>
       
 
@@ -86,14 +77,18 @@
 <script>
 
 import Repositorio from './services/repositorios'
-import BotaoLimpar from './components/BotaoLimpar'
 
+
+import PButton from './components/atoms/PButton'
+import SButton from './components/atoms/SButton'
 
 export default {
   name: 'app',
  
   components: {   
-    BotaoLimpar
+   
+    PButton,
+    SButton
     
   },
 

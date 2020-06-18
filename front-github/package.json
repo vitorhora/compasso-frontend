@@ -9,24 +9,32 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-styled-components": "^1.5.1"
   },
   "devDependencies": {
+    "@storybook/addon-storysource": "5.0.11",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
     "@vue/cli-service": "^3.0.0",
+    "storybook-addon-vue-info": "1.1.1",
+    "storybook-vue-router": "1.0.3",
+    "vue-cli-plugin-atomic-design": "~0.3.3",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "jest": true
     },
     "extends": [
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "import/no-extraneous-dependencies": "error"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

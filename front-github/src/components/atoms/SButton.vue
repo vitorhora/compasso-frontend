@@ -1,24 +1,26 @@
 <template>
-  <SButton @click="$emit('click')">Limpar</SButton>
-</template>
 
+  <SButton @click="$emit('click')">Limpar</SButton>
+
+</template>
 
 <script>
 
-import SButton from '../styled/SButton'
+  import SButton from '../styled/SButton'
 
-export default {
-  name: 'app',
- 
-  components: {   
-    SButton   
-  },
+  export default {
+    name: 'app',
+  
+    components: {   
+      SButton   
+    },
 
-  props: {
-    onClick: {
-      type: Function,
-      required: true
+    props: {
+      onClick: {
+        type: Function,
+        required: true
+      }
     }
   }
-}
+
 </script>

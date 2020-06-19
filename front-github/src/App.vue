@@ -1,30 +1,25 @@
 <template>
+
   <div id="app">
 
     <div>
-      <VHeader />
+      <InformacoesGit />
     </div>
-
-    <div>
-      <PesquisaInformacoes />  
-    </div>  
 
   </div>
 </template>
 
 <script>
 
-import PesquisaInformacoes from './components/molecules/PesquisaInformacoes'
-import VHeader from './components/molecules/VHeader'
+  import InformacoesGit from './components/organisms/InformacoesGit'
 
-export default {
-  name: 'app',
- 
-  components: {    
-    PesquisaInformacoes,
-    VHeader
-    
-  },
-}
+  export default {
+    name: 'app',
+  
+    components: {    
+      InformacoesGit,    
+    },
+  }
+  
 </script>
 

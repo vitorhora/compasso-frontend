@@ -1,4 +1,5 @@
 <template>
+
    <div class="container">
       
       <label>Usu&aacute;rio</label>
@@ -28,6 +29,7 @@
            <label>Id: </label>
           <span> {{informacao.id}}</span>
          </td>
+
           <td>
            <label>Login: </label>
            <span>{{informacao.login}}</span> 
@@ -39,6 +41,7 @@
            <label>Tipo: </label>
            <span>  {{informacao.type}} </span>
           </td>
+
           <td>
            <label>Email: </label>
            <span>  {{informacao.email}}</span> 
@@ -49,9 +52,7 @@
       <table class="striped">
 
           <tr>
-
             <th>Resultado</th>  
-
           </tr>      
 
         <tbody>
@@ -73,105 +74,104 @@
 
 <script>
 
-import Repositorio from '../../services/repositorios'
-import PButton from '../atoms/PButton'
-import SButton from '../atoms/SButton'
-import VInputText from '../atoms/VInputText'
+  import Repositorio from '../../services/repositorios'
+  import PButton from '../atoms/PButton'
+  import SButton from '../atoms/SButton'
+  import VInputText from '../atoms/VInputText'
 
-export default {
-  name: 'app',
+  export default {
+    name: 'app',
 
-  props: {
-    usuario: {
-      type: String,
-      required: true
-    }
+    props: {
+      usuario: {
+        type: String,
+        required: true
+      }
+      
+    },
+  
+    components: {  
     
-  },
- 
-  components: {  
-   
-    PButton,
-    SButton,    
-    VInputText
-    
-  },
+      PButton,
+      SButton,    
+      VInputText
+      
+    },
 
-  data () {
-    return {
-      informacao:{
-        login: '',
-        id: '',
-        type: '',
-        email: ''
+    data () {
+      return {
+        informacao:{
+          login: '',
+          id: '',
+          type: '',
+          email: ''
+        },
+        repositorios: []
+      }
+    },
+
+    mounted(){    
+      console.log(location.pathname);   
+      this.usuario = location.pathname.replace('/','');
+      if (this.usuario){
+        this.listarRepositorios();
+        this.consultarUsuario()
+      }
+    },
+
+    methods:{
+
+      limparTela(){
+        this.usuario = '';
+        this.informacao = '';
+        this.repositorios = [];
       },
-      repositorios: []
-    }
-  },
 
-  mounted(){    
-    console.log(location.pathname);   
-    this.usuario = location.pathname.replace('/','');
-    if (this.usuario){
-      this.listarRepositorios();
-      this.consultarUsuario()
-    }
-  },
-
-  methods:{
-
-    limparTela(){
-      this.usuario = '';
-      this.informacao = '';
-      this.repositorios = [];
-    },
-
-    consultarUsuario(){
-       if (!this.usuario || !this.usuario.trim()) {
-         alert('Informar dado da pesquisa'); 
-         return; 
-      };
-   
-      Repositorio.consultarUsuario(this.usuario).then(resposta => {
-        this.informacao = resposta.data
-          
-      }).catch(e => {
-        
-        console.log(e)
-      })
-
-    },
+      consultarUsuario(){
+        if (!this.usuario || !this.usuario.trim()) {
+          alert('Informar dado da pesquisa'); 
+          return; 
+        };
     
-    listarRepositorios(){  
-      if (!this.usuario || !this.usuario.trim()) {
-         alert('Informar dado da pesquisa'); 
-         return; 
-      };
+        Repositorio.consultarUsuario(this.usuario).then(resposta => {
+          this.informacao = resposta.data
+            
+        }).catch(e => {          
+          console.log(e)
+        })
+
+      },
       
-      this.consultarUsuario();
+      listarRepositorios(){  
+        if (!this.usuario || !this.usuario.trim()) {
+          alert('Informar dado da pesquisa'); 
+          return; 
+        };
+        
+        this.consultarUsuario();
 
-      Repositorio.listarRepositorios(this.usuario).then(resposta => {
-        this.repositorios = resposta.data
-      }).catch(e => {
-        console.log(e)
-      })
-    },
+        Repositorio.listarRepositorios(this.usuario).then(resposta => {
+          this.repositorios = resposta.data
+        }).catch(e => {
+          console.log(e)
+        })
+      },
 
-    listarFavoritos(){
-      if (!this.usuario || !this.usuario.trim()) {
-         alert('Informar dado da pesquisa'); 
-         return; 
-      };
-      
-      this.consultarUsuario();
+      listarFavoritos(){
+        if (!this.usuario || !this.usuario.trim()) {
+          alert('Informar dado da pesquisa'); 
+          return; 
+        };
+        
+        this.consultarUsuario();
 
-      Repositorio.listarFavoritos(this.usuario).then(resposta => {
-        this.repositorios = resposta.data
-      }).catch(e => {
-        console.log(e)
-      })
+        Repositorio.listarFavoritos(this.usuario).then(resposta => {
+          this.repositorios = resposta.data
+        }).catch(e => {
+          console.log(e)
+        })
+      }
     }
   }
 
-}
 </script>

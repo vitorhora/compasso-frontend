@@ -1,5 +1,3 @@
-// atoms/PButton.vue
-
 <template>
   <button class="waves-effect waves-light btn-small" @click="$emit('click')">   
 	  <slot></slot>

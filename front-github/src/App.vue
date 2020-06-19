@@ -1,183 +1,30 @@
 <template>
   <div id="app">
-    <nav>
-      <div class="nav-wrapper green lighten-1">
 
-        <a href="#" class="brand-logo center">Informa&ccedil;&otilde;es GIT</a>
-
-      </div>
-    </nav>
-
-    <div class="container">
-      
-      <label>Usu&aacute;rio</label>
-      <VInputText type="text" :value="usuario" placeholder="Digite sua pesquisa" @input="usuario = $event"/>
-     
-      <td>                
-          <PButton @click="listarRepositorios">
-            <slot>repos</slot>
-          </PButton>
-      </td> 
-
-      <td>         
-          <PButton @click="listarFavoritos">
-            <slot>starred</slot>
-          </PButton>
-      </td> 
-
-      <td>          
-          <SButton @click="limparTela">
-            <slot>Limpar</slot>
-          </SButton>
-
-      </td>
-       
-      <tr>        
-        <td>
-           <label>Id: </label>
-          <span> {{informacao.id}}</span>
-         </td>
-          <td>
-           <label>Login: </label>
-           <span>{{informacao.login}}</span> 
-          </td>        
-      </tr>   
-
-       <tr>   
-          <td>
-           <label>Tipo: </label>
-           <span>  {{informacao.type}} </span>
-          </td>
-          <td>
-           <label>Email: </label>
-           <span>  {{informacao.email}}</span> 
-          </td>        
-      </tr>   
-
-    
-      <table class="striped">
-
-          <tr>
-
-            <th>Resultado</th>  
-
-          </tr>      
-
-        <tbody>
-
-          <tr v-for="repositorio of repositorios" :key="repositorio.id">             
-             
-              <td>{{ repositorio.url }}</td>           
-
-          </tr>
-
-        </tbody>
-      
-      </table>
-
+    <div>
+      <VHeader />
     </div>
+
+    <div>
+      <PesquisaInformacoes />  
+    </div>  
 
   </div>
 </template>
 
 <script>
 
-import Repositorio from './services/repositorios'
-
-
-import PButton from './components/atoms/PButton'
-import SButton from './components/atoms/SButton'
-import VInput from './components/atoms/VInput'
-import VInputText from './components/atoms/VInputText'
+import PesquisaInformacoes from './components/molecules/PesquisaInformacoes'
+import VHeader from './components/molecules/VHeader'
 
 export default {
   name: 'app',
  
-  components: {   
-   
-    PButton,
-    SButton,  
-    VInput,
-    VInputText
+  components: {    
+    PesquisaInformacoes,
+    VHeader
     
   },
-
-  data () {
-    return {
-      informacao:{
-        login: '',
-        id: '',
-        type: '',
-        email: ''
-      },
-      repositorios: []
-    }
-  },
-
-  mounted(){    
-    console.log(location.pathname);   
-    this.usuario = location.pathname.replace('/','');
-    if (this.usuario){
-      this.listarRepositorios();
-      this.consultarUsuario()
-    }
-  },
-
-  methods:{
-
-    limparTela(){
-      this.usuario = '';
-      this.informacao = '';
-      this.repositorios = [];
-    },
-
-    consultarUsuario(){
-       if (!this.usuario || !this.usuario.trim()) {
-         alert('Informar dado da pesquisa'); 
-         return; 
-      };
-   
-      Repositorio.consultarUsuario(this.usuario).then(resposta => {
-        this.informacao = resposta.data
-          
-      }).catch(e => {
-        
-        console.log(e)
-      })
-
-    },
-    
-    listarRepositorios(){  
-      if (!this.usuario || !this.usuario.trim()) {
-         alert('Informar dado da pesquisa'); 
-         return; 
-      };
-      
-      this.consultarUsuario();
-
-      Repositorio.listarRepositorios(this.usuario).then(resposta => {
-        this.repositorios = resposta.data
-      }).catch(e => {
-        console.log(e)
-      })
-    },
-
-    listarFavoritos(){
-      if (!this.usuario || !this.usuario.trim()) {
-         alert('Informar dado da pesquisa'); 
-         return; 
-      };
-      
-      this.consultarUsuario();
-
-      Repositorio.listarFavoritos(this.usuario).then(resposta => {
-        this.repositorios = resposta.data
-      }).catch(e => {
-        console.log(e)
-      })
-    }
-  }
-
 }
 </script>
 

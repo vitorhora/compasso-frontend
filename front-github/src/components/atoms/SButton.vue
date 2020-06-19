@@ -1,5 +1,3 @@
-// atoms/PButton.vue
-
 <template>
   <SButton @click="$emit('click')">Limpar</SButton>
 </template>
@@ -7,7 +5,7 @@
 
 <script>
 
-import SButton from './SButton'
+import SButton from '../styled/SButton'
 
 export default {
   name: 'app',

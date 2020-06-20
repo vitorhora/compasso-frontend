@@ -69,7 +69,6 @@
        
     </div>
 
-
 </template>
 
 <script>
@@ -85,17 +84,14 @@
     props: {
       usuario: {
         type: String,
-        required: true
-      }
-      
+        required: false
+      }      
     },
   
-    components: {  
-    
+    components: {     
       PButton,
       SButton,    
-      VInputText
-      
+      VInputText      
     },
 
     data () {
@@ -110,8 +106,7 @@
       }
     },
 
-    mounted(){    
-      console.log(location.pathname);   
+    mounted(){          
       this.usuario = location.pathname.replace('/','');
       if (this.usuario){
         this.listarRepositorios();
@@ -120,7 +115,7 @@
     },
 
     methods:{
-
+      
       limparTela(){
         this.usuario = '';
         this.informacao = '';
@@ -131,22 +126,21 @@
         if (!this.usuario || !this.usuario.trim()) {
           alert('Informar dado da pesquisa'); 
           return; 
-        };
-    
+        }    
+   
         Repositorio.consultarUsuario(this.usuario).then(resposta => {
           this.informacao = resposta.data
             
         }).catch(e => {          
           console.log(e)
-        })
-
+        })        
       },
       
       listarRepositorios(){  
         if (!this.usuario || !this.usuario.trim()) {
           alert('Informar dado da pesquisa'); 
           return; 
-        };
+        }
         
         this.consultarUsuario();
 
@@ -161,7 +155,7 @@
         if (!this.usuario || !this.usuario.trim()) {
           alert('Informar dado da pesquisa'); 
           return; 
-        };
+        }
         
         this.consultarUsuario();
 

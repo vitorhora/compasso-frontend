@@ -1,7 +1,7 @@
 <template>
 
   <button class="waves-effect waves-light btn-small" @click="$emit('click')">   
-	  <slot></slot>
+	<slot></slot>
   </button>
 
 </template>
@@ -12,7 +12,7 @@
     props: {
       onClick: {
         type: Function,
-        required: true
+        required: false
       }
     }
   }

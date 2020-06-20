@@ -11,6 +11,8 @@
     "@types/styled-components": "^5.1.0",
     "axios": "^0.18.1",
     "vue": "^2.5.17",
+    "vue-head": "^2.2.0",
+    "vue-router": "^3.3.4",
     "vue-styled-components": "^1.5.1"
   },
   "devDependencies": {

@@ -1,6 +1,8 @@
 <template>
 
-  <SButton @click="$emit('click')">Limpar</SButton>
+  <SButton @click="$emit('click')">
+    <slot></slot>
+  </SButton>
 
 </template>
 

@@ -16,7 +16,7 @@
   export default {
     data: function () {
       return {
-        title: 'Informações Usuário'
+        title: 'Compasso'
       }
     },
    

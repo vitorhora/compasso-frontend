@@ -4,7 +4,7 @@
       
     <label>Usu&aacute;rio</label>
     <VInputText type="text" :value="usuario" placeholder="Digite sua pesquisa" @input="usuario = $event"/>
-    
+
     <td>                
       <PButton @click="listarRepositorios">
         <slot>repos</slot>
@@ -22,18 +22,17 @@
         <slot>Limpar</slot>
       </SButton>
 
-    </td>
-    
+    </td>    
+
     <div v-if="mensagem">
       <tr>
-        <td>
-          <label>OBS: </label>
-          <span>Sistema com falha. Entre em contato com o suporte e informe: {{mensagem}}</span>
+        <td>        
+          <span>{{mensagem}}</span>
           </td> 
       </tr>
     </div>
 
-    <div v-if="informacao != ''">
+    <div v-if="informacao.id">
       
       <tr>        
         <td>
@@ -57,24 +56,23 @@
           <label>Email: </label>
           <span>{{informacao.email}}</span> 
         </td>        
-      </tr>   
+      </tr> 
 
-    
-      <table class="striped">
+      <div v-if="repositorios[0]">
+        <table class="striped">
+          <tbody>
+         
+            <tr v-for="item in pageOfItems" :key="item.id">
+              <td>{{ item.url }}</td>
+            </tr>
+     
+            <div>
+              <jw-pagination :items="repositorios" @changePage="onChangePage"></jw-pagination>
+            </div>
 
-        <tr>
-          <th>Resultado</th>  
-        </tr>      
-
-        <tbody>
-
-          <tr v-for="repositorio of repositorios" :key="repositorio.id">          
-            <td>{{ repositorio.url }}</td>
-          </tr>
-
-        </tbody>
-      
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>     
   </div>
 
@@ -98,7 +96,7 @@
       mensagem: {
         type: String,
         required: false
-      }     
+      }         
     },
   
     components: {     
@@ -113,75 +111,99 @@
           login: '',
           id: '',
           type: '',
-          email: '',
-          message: ''
+          email: ''         
         },
-        repositorios: []
+        repositorios: [],       
+        pageOfItems: []       
       }
     },
 
     mounted(){          
       this.usuario = location.pathname.replace('/','');
-      if (this.usuario){        
-        this.listarRepositorios();
+      if (this.usuario){          
         this.consultarUsuario()
 
       }else{
         this.limparTela();  
-      }
-      
+      }      
     },
 
     methods:{
       
+      onChangePage(pageOfItems) {
+        // Atualiza página de itens.
+        this.pageOfItems = pageOfItems;
+      },
+           
       limparTela(){
         this.usuario = '';
         this.informacao = '';
-        this.mensagem = '';
+        this.mensagem = '';       
         this.repositorios = [];
       },
 
       consultarUsuario(){
-        if (!this.usuario || !this.usuario.trim()) {
-          alert('Informar dado da pesquisa'); 
-          return; 
+        if (!this.usuario || !this.usuario.trim()) {       
+          this.mensagem = '* Informar dado da pesquisa'; 
+          return;         
         }            
         
         Repositorio.consultarUsuario(this.usuario).then(resposta => {
           this.informacao = resposta.data
             
-        }).catch(e => {          
-          console.log(e)
+        }).catch(e => {
+          this.informacao = '';                
+          if(e.response != null && e.response.status == '404'){
+            this.mensagem = "* Usu&#225;rio n&#227;o encontrado.";
+          }else{
+            this.mensagem = '# Sistema com falha. Entre em contato com o suporte e informe: ' + e.message;
+          }
+
         })        
       },
       
       listarRepositorios(){  
         if (!this.usuario || !this.usuario.trim()) {
-          alert('Informar dado da pesquisa'); 
-          return; 
+          this.mensagem = '* Informar dado da pesquisa';  
+          return;         
         }
       
+        this.mensagem = '';        
         this.consultarUsuario();
                
         Repositorio.listarRepositorios(this.usuario).then(resposta => {
           this.repositorios = resposta.data
-        }).catch(e => {     
-          this.mensagem = e.message;
+          
+        }).catch(e => { 
+
+          this.informacao = '';                
+          if(e.response != null && e.response.status == '404'){
+            this.mensagem = "* Usu&#225;rio n&#227;o encontrado.";
+          }else{
+            this.mensagem = '# Sistema com falha. Entre em contato com o suporte e informe: ' + e.message;
+          }
         })
       },
 
       listarFavoritos(){
         if (!this.usuario || !this.usuario.trim()) {
-          alert('Informar dado da pesquisa'); 
+          this.mensagem = '* Informar dado da pesquisa';
           return; 
         }
         
+        this.mensagem = '';       
         this.consultarUsuario();
 
         Repositorio.listarFavoritos(this.usuario).then(resposta => {
           this.repositorios = resposta.data
         }).catch(e => {
-          this.mensagem = e.message;
+
+          this.informacao = '';                
+          if(e.response != null && e.response.status == '404'){
+            this.mensagem = "* Usu&#225;rio n&#227;o encontrado.";
+          }else{
+            this.mensagem = '# Sistema com falha. Entre em contato com o suporte e informe: ' + e.message;
+          }
         })
       }
     }

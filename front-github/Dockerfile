@@ -11,6 +11,8 @@ COPY package*.json ./
 
 # instala depend�ncias do projeto
 RUN npm install
+RUN npm install
+RUN npm install @vue/cli@3.7.0 -g
 
 # copia arquivos e pastas para o diret�rio atual de trabalho (pasta 'app')
 COPY . .

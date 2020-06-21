@@ -119,7 +119,7 @@
     },
 
     mounted(){          
-      this.usuario = location.pathname.replace('/','');
+      this.usuario = window.location.pathname.replace('/','');
       if (this.usuario){          
         this.consultarUsuario()
 

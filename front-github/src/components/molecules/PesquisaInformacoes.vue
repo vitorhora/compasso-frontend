@@ -63,7 +63,7 @@
           <tbody>
          
             <tr v-for="item in pageOfItems" :key="item.id">
-              <td>{{ item.url }}</td>
+              <td>{{item.url}}</td>
             </tr>
      
             <div>
@@ -78,12 +78,12 @@
 
 </template>
 
-<script>
+<script> 
 
   import Repositorio from '../../services/repositorios'
   import PButton from '../atoms/PButton'
   import SButton from '../atoms/SButton'
-  import VInputText from '../atoms/VInputText'
+  import VInputText from '../atoms/VInputText' 
 
   export default {
     name: 'app',
@@ -129,9 +129,9 @@
     },
 
     methods:{
-      
+
       onChangePage(pageOfItems) {
-        // Atualiza página de itens.
+        // Atualiza pï¿½gina de itens.
         this.pageOfItems = pageOfItems;
       },
            

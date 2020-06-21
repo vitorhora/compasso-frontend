@@ -27,10 +27,10 @@
         }
       },
       meta: [
-        { name: 'description', content: 'Veja gratuitamente informações dos usuários GitHub, repositórios, favoritos com apenas o nome do usuário. O repositório GitHub é onde estão localizados fontes de aplicativos em diversas tecnologias.', id: 'description',  },
-        { name: 'application-name', content: 'Informções GIT' },
+        { name: 'description', content: 'Veja gratuitamente informaï¿½ï¿½es dos usuï¿½rios GitHub, repositï¿½rios, favoritos com apenas o nome do usuï¿½rio. O repositï¿½rio GitHub ï¿½ onde estï¿½o localizados fontes de aplicativos em diversas tecnologias.', id: 'description',  },
+        { name: 'application-name', content: 'Informï¿½ï¿½es GIT' },
         { name: 'author', content: 'Vitor Cavalcante Hora' },
-        { name: 'keywords', content: 'consulta, github, favoritos, repositório, informações, usuário, git' }
+        { name: 'keywords', content: 'consulta, github, favoritos, repositï¿½rio, informaï¿½ï¿½es, usuï¿½rio, git' }
       ],
 
       link: [

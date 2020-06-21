@@ -120,6 +120,9 @@
 
     mounted(){          
       this.usuario = window.location.pathname.replace('/','');
+      alert(window.location.pathname.replace('/',''));
+      alert(location.pathname.replace('/',''));
+      alert(this.usuario);
       if (this.usuario){          
         this.consultarUsuario()
 

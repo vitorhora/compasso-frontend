@@ -32,7 +32,7 @@ Na página do campo de busca, deverá ser possível inserir nomes de usuários d
 
 Apresentação da aplicação.
 
-![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/artefatos/imagens/Aplicacao.png)
+![alt text](/artefatos/imagens/Aplicacao.png?raw=true "Aplicação")
 
 
 
@@ -40,7 +40,7 @@ Apresentação da aplicação.
 
 Visão de arquitetura.
 
-![alt text](https://github.com/vitorhora/compasso-frontend/blob/master/artefatos/imagens/Arquitetura_Front.png)
+![alt text](/artefatos/imagens/Arquitetura_Front.png?raw=true "Arquitetura Projeto")
 
 
 ### Setup do projeto

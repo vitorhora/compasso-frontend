@@ -72,12 +72,12 @@ O repositógio git está integrado com o repositório de imagens Docker Hub. Tod
 
 Endereço: 
     ```
-    docker pull vitorhora/front_vuejs:front-github
+    https://hub.docker.com/r/vitorhora/front_vuejs
     ```
 
 Pull da Imagem:
     ```
-    docker pull vitorhora/front_vuejs
+    docker pull vitorhora/front_vuejs:front-github
     ```
 
 Executar imagem criada: 

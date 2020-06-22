@@ -82,12 +82,12 @@ Pull da Imagem:
 
 Executar imagem criada: 
     ```
-    docker run -p 8080:80 <IMAGE ID>
+    docker run -p 8085:80 <IMAGE ID>
     ```
 
 Url App: 
     ```
-    http://localhost:8080
+    http://localhost:8085
     ```
 
 

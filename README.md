@@ -70,12 +70,16 @@ A URL será informada quando o servidor terminar de iniciar.
 
 O repositógio git está integrado com o repositório de imagens Docker Hub. Todo push realizado no git, automaticamente é disponibilizada imagem no repositório Doker Hub.
 
-Endereço: ```https://hub.docker.com/r/vitorhora/front_vuejs```
+Endereço: 
+    ```https://hub.docker.com/r/vitorhora/front_vuejs```
 
-Pull da Imagem: ```docker pull vitorhora/front_vuejs```
+Pull da Imagem:
+    ```docker pull vitorhora/front_vuejs```
 
-Executar imagem criada: ```docker run -p 8080:80 <IMAGE ID>```
+Executar imagem criada: 
+    ```docker run -p 8080:80 <IMAGE ID>```
 
-Url App: ```http://localhost:8080```
+Url App: 
+    ```http://localhost:8080```
 
 

@@ -154,7 +154,7 @@
         }).catch(e => {
           this.informacao = '';                
           if(e.response != null && e.response.status == '404'){
-            this.mensagem = "* Usu&#225;rio n&#227;o encontrado.";
+            this.mensagem = "* Sem cadastro no GIT.";
           }else{
             this.mensagem = '# Sistema com falha. Entre em contato com o suporte e informe: ' + e.message;
           }
@@ -178,7 +178,7 @@
 
           this.informacao = '';                
           if(e.response != null && e.response.status == '404'){
-            this.mensagem = "* Usu&#225;rio n&#227;o encontrado.";
+            this.mensagem = "* Sem cadastro no GIT.";
           }else{
             this.mensagem = '# Sistema com falha. Entre em contato com o suporte e informe: ' + e.message;
           }
@@ -200,7 +200,7 @@
 
           this.informacao = '';                
           if(e.response != null && e.response.status == '404'){
-            this.mensagem = "* Usu&#225;rio n&#227;o encontrado.";
+            this.mensagem = "* Sem cadastro no GIT.";
           }else{
             this.mensagem = '# Sistema com falha. Entre em contato com o suporte e informe: ' + e.message;
           }

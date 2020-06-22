@@ -1,7 +1,7 @@
 <template>
 
   <SButton @click="$emit('click')">
-    <slot></slot>
+  <slot></slot>
   </SButton>
 
 </template>

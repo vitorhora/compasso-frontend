@@ -67,9 +67,5 @@ A URL será informada quando o servidor terminar de iniciar.
 * Endpoint starred: https://api.github.com/users/USER_GITHUB/starred{/owner}{/repo}
 
 
-## Integração Contínua
 
-O repositógio git está integrado com o repositório de imagens Docker Hub. Todo push realizado no git, automaticamente é disponibilizada  imagem no repositório Doker Hub.
-
-Endereço: https://hub.docker.com/r/vitorhora/front_vuejs
 

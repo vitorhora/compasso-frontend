@@ -22,7 +22,7 @@
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
     "@vue/cli-plugin-unit-jest": "^4.4.4",
-    "@vue/cli-service": "^3.0.0",
+    "@vue/cli-service": "^5.0.8",
     "@vue/test-utils": "^1.0.3",
     "storybook-addon-vue-info": "^1.4.2",
     "vue-template-compiler": "^2.5.17"
